@@ -1,4 +1,4 @@
-# FXConsole AE2026 Chinese Patch
+# FXConsole AE2026 ????
 
 Unofficial FXConsole AE2026 Chinese patch and updater package.
 
@@ -30,7 +30,7 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\update_fxconsole_cn.ps
 Install the CEP panel from `AEPluginUpdater_v0.1.0.zip`, restart After Effects, then open:
 
 ```text
-Window > Extensions > AE Plugin Updater
+Window > Extensions > ????????
 ```
 
 ## Integrity
