@@ -7,7 +7,9 @@ Unofficial FXConsole AE2026 Chinese patch and updater package.
 - `FXConsole.aex`: patched plugin file.
 - `latest.json`: update manifest.
 - `update_fxconsole_cn.ps1`: standalone updater script.
-- `AEPluginUpdater_v0.1.0.zip`: After Effects CEP updater panel.
+- `SuperPluginManager_v0.1.0.zxp`: signed CEP panel package.
+- `SuperPluginManager_dropin_CEP_extensions_v0.1.0.zip`: signed folder package that can be copied into the CEP extensions directory.
+- `AEPluginUpdater_v0.1.0.zip`: unsigned development package of the CEP panel.
 - `FXConsole_AE2026_CN_v0.14.0_release.zip`: complete release package.
 
 ## Update Sources
@@ -26,6 +28,23 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\update_fxconsole_cn.ps
 ```
 
 ## AE Panel Update
+
+Recommended for normal users:
+
+1. Install `SuperPluginManager_v0.1.0.zxp` with a ZXP installer.
+2. Or unzip `SuperPluginManager_dropin_CEP_extensions_v0.1.0.zip` and copy the `AEPluginUpdater` folder to:
+
+```text
+%APPDATA%\Adobe\CEP\extensions
+```
+
+Then restart After Effects and open:
+
+```text
+Window > Extensions > 超级插件管理中心
+```
+
+Development install:
 
 Install the CEP panel from `AEPluginUpdater_v0.1.0.zip`, restart After Effects, then open:
 
