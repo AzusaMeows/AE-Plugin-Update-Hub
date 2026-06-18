@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "id": "fxconsole-ae2026-cn",
-  "name": "FXConsole AE2026 Chinese Patch",
+  "name": "FXConsole AE2026 中文补丁",
   "version": "0.14.0",
   "channel": "experimental",
   "releasedAt": "2026-06-18",
@@ -10,9 +10,9 @@
   "size": 1592320,
   "sha256": "E802E964E6505341A0AF57E965EBCC319D68EF65552A863D871F96727E1EA9E2",
   "notes": [
-    "Chinese display/search patch based on the stable GBK V8 build.",
-    "Adds tail-jump pinyin-initial search for 2-12 letter ASCII queries.",
-    "Keeps normal FXConsole search path restored before jumping to the original function."
+    "基于稳定的 GBK V8 版本制作，修复 AE2026 中文显示和搜索问题。",
+    "新增 2-12 位英文字母的拼音首字母搜索，支持类似 bgd 搜索“曝光度”。",
+    "搜索补丁采用尾跳转方案，普通搜索路径会恢复寄存器后回到 FXConsole 原函数。"
   ],
   "downloads": [
     {
