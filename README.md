@@ -7,15 +7,15 @@ Unofficial FXConsole AE2026 Chinese patch and updater package.
 - `FXConsole.aex`: patched plugin file.
 - `latest.json`: update manifest.
 - `update_fxconsole_cn.ps1`: standalone updater script.
-- `FXConsoleCNUpdater_v0.1.0.zip`: After Effects CEP updater panel.
+- `AEPluginUpdater_v0.1.0.zip`: After Effects CEP updater panel.
 - `FXConsole_AE2026_CN_v0.14.0_release.zip`: complete release package.
 
 ## Update Sources
 
 The updater checks the CDN mirror first, then GitHub Releases:
 
-- CDN manifest: `https://cdn.jsdelivr.net/gh/AzusaMeows/FXConsole-AE2026-CN@main/latest.json`
-- GitHub manifest: `https://github.com/AzusaMeows/FXConsole-AE2026-CN/releases/latest/download/latest.json`
+- CDN manifest: `https://cdn.jsdelivr.net/gh/AzusaMeows/AE-Plugin-Update-Hub@main/latest.json`
+- GitHub manifest: `https://github.com/AzusaMeows/AE-Plugin-Update-Hub/releases/latest/download/latest.json`
 
 ## Standalone Update
 
@@ -27,10 +27,10 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\update_fxconsole_cn.ps
 
 ## AE Panel Update
 
-Install the CEP panel from `FXConsoleCNUpdater_v0.1.0.zip`, restart After Effects, then open:
+Install the CEP panel from `AEPluginUpdater_v0.1.0.zip`, restart After Effects, then open:
 
 ```text
-Window > Extensions > FXConsole CN Updater
+Window > Extensions > AE Plugin Updater
 ```
 
 ## Integrity

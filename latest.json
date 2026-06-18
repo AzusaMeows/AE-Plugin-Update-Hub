@@ -18,12 +18,12 @@
     {
       "name": "cdn-jsdelivr",
       "type": "mirror",
-      "url": "https://cdn.jsdelivr.net/gh/AzusaMeows/FXConsole-AE2026-CN@v0.14.0/FXConsole.aex"
+      "url": "https://cdn.jsdelivr.net/gh/AzusaMeows/AE-Plugin-Update-Hub@v0.14.0/FXConsole.aex"
     },
     {
       "name": "github",
       "type": "primary",
-      "url": "https://github.com/AzusaMeows/FXConsole-AE2026-CN/releases/download/v0.14.0/FXConsole.aex"
+      "url": "https://github.com/AzusaMeows/AE-Plugin-Update-Hub/releases/download/v0.14.0/FXConsole.aex"
     }
   ]
 }
