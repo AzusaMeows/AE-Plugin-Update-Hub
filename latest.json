@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "id": "fxconsole-ae2026-cn",
+  "name": "FXConsole AE2026 Chinese Patch",
+  "version": "0.14.0",
+  "channel": "experimental",
+  "releasedAt": "2026-06-18",
+  "minimumAeVersion": "2026",
+  "fileName": "FXConsole.aex",
+  "size": 1592320,
+  "sha256": "E802E964E6505341A0AF57E965EBCC319D68EF65552A863D871F96727E1EA9E2",
+  "notes": [
+    "Chinese display/search patch based on the stable GBK V8 build.",
+    "Adds tail-jump pinyin-initial search for 2-12 letter ASCII queries.",
+    "Keeps normal FXConsole search path restored before jumping to the original function."
+  ],
+  "downloads": [
+    {
+      "name": "cdn-jsdelivr",
+      "type": "mirror",
+      "url": "https://cdn.jsdelivr.net/gh/AzusaMeows/FXConsole-AE2026-CN@v0.14.0/FXConsole.aex"
+    },
+    {
+      "name": "github",
+      "type": "primary",
+      "url": "https://github.com/AzusaMeows/FXConsole-AE2026-CN/releases/download/v0.14.0/FXConsole.aex"
+    }
+  ]
+}
