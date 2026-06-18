@@ -1,6 +1,7 @@
 param(
     [string]$InstallPath = "$env:ProgramFiles\Adobe\Adobe After Effects 2026\Support Files\Plug-ins\VideoCopilot\FXConsole.aex",
     [string[]]$ManifestUrls = @(
+        "https://gitee.com/azusameow/ae-plugin-update-hub/raw/main/latest.json",
         "https://cdn.jsdelivr.net/gh/AzusaMeows/AE-Plugin-Update-Hub@main/latest.json",
         "https://github.com/AzusaMeows/AE-Plugin-Update-Hub/releases/latest/download/latest.json"
     ),

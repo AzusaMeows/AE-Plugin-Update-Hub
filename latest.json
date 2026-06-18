@@ -16,6 +16,11 @@
   ],
   "downloads": [
     {
+      "name": "gitee-cn",
+      "type": "mirror",
+      "url": "https://gitee.com/azusameow/ae-plugin-update-hub/raw/main/FXConsole.aex"
+    },
+    {
       "name": "cdn-jsdelivr",
       "type": "mirror",
       "url": "https://cdn.jsdelivr.net/gh/AzusaMeows/AE-Plugin-Update-Hub@v0.14.0/FXConsole.aex"
