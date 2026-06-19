@@ -14,7 +14,7 @@ Unofficial FXConsole AE2026 Chinese patch and updater package.
 
 ## Update Sources
 
-The updater checks the CDN mirror first, then GitHub Releases:
+The updater checks Gitee first, then CDN, then GitHub Releases:
 
 - CDN manifest: `https://cdn.jsdelivr.net/gh/AzusaMeows/AE-Plugin-Update-Hub@main/latest.json`
 - GitHub manifest: `https://github.com/AzusaMeows/AE-Plugin-Update-Hub/releases/latest/download/latest.json`
@@ -43,6 +43,8 @@ Then restart After Effects and open:
 ```text
 Window > Extensions > 超级插件管理中心
 ```
+
+In the panel, use `直接替换` after `下载并校验`. If the target file is locked or Program Files denies writing, the panel creates an offline install script and opens its folder. Close After Effects, then run that script.
 
 Development install:
 
