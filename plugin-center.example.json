@@ -1,0 +1,22 @@
+{
+  "id": "deepglow-example",
+  "name": "Deep Glow 示例包",
+  "version": "1.0.0",
+  "type": "原生插件 + 面板",
+  "description": "示例配置：把 Deep Glow 这类 .aex 插件、CEP 控制面板或脚本面板组合成一个可一键安装的包。",
+  "items": [
+    {
+      "kind": "native",
+      "source": "Plug-ins/Deep Glow.aex",
+      "target": "{commonPlugins}/Plugin Everything/Deep Glow",
+      "name": "Deep Glow.aex"
+    },
+    {
+      "kind": "cep",
+      "source": "Panel",
+      "target": "{cepExtensions}",
+      "targetName": "DeepGlowPanel"
+    }
+  ],
+  "postInstall": "Deep Glow 示例包已复制完成。部分原生插件需要授权文件或官方运行库，请按插件厂商要求完成激活。"
+}

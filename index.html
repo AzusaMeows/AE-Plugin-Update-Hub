@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>超级插件管理中心</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="hero">
+        <div>
+          <h1>超级插件管理中心</h1>
+          <p class="subtitle">选择插件，确认后安装。</p>
+        </div>
+        <div class="status-card">
+          <span id="aeVersion">AE：检测中…</span>
+        </div>
+      </section>
+
+      <section class="toolbar">
+        <button id="checkRemoteBtn">在线检查</button>
+        <span id="quickStatus" class="quick-status">就绪</span>
+        <button id="settingsBtn" class="ghost">设置</button>
+        <div class="hidden">
+          <select id="sourceMode">
+            <option value="auto">自动：Gitee 优先</option>
+            <option value="gitee">Gitee 国内源</option>
+            <option value="github">GitHub 国际源</option>
+          </select>
+          <button id="choosePackageBtn">安装插件</button>
+          <button id="chooseRepoBtn">选择插件库</button>
+          <button id="refreshBtn">重新扫描</button>
+          <button id="openConfigBtn">配置文件</button>
+        </div>
+      </section>
+
+      <section class="layout">
+        <aside class="panel plugins-panel">
+          <div class="panel-head">
+            <h2>插件</h2>
+            <span id="pluginCount">0 个</span>
+          </div>
+          <div id="pluginList" class="plugin-list"></div>
+        </aside>
+
+        <section class="panel detail-panel">
+          <div id="emptyState" class="empty">
+            <h2>从一个插件开始</h2>
+            <p>点击“安装插件”，或把插件包拖进上方区域。</p>
+          </div>
+
+          <div id="detailView" class="hidden">
+            <div class="detail-title">
+              <div>
+                <h2 id="detailName"></h2>
+              </div>
+              <span id="detailType" class="badge"></span>
+            </div>
+
+            <p id="detailDescription" class="desc"></p>
+
+            <div class="actions">
+              <button id="installBtn" class="primary">安装</button>
+              <button id="uninstallBtn" class="danger hidden">卸载插件</button>
+              <button id="uninstallAllBtn" class="danger ghost hidden">卸载所有版本</button>
+              <button id="revealBtn">查看来源</button>
+            </div>
+
+            <details class="advanced">
+              <summary>高级安装选项</summary>
+              <div class="grid">
+                <label>
+                  安装位置
+                  <select id="installMode">
+                    <option value="app">默认：当前 AE 安装目录 / Plug-ins</option>
+                    <option value="common">Adobe Common / MediaCore</option>
+                    <option value="user">用户目录（通常不需要管理员）</option>
+                    <option value="custom">自定义目录</option>
+                  </select>
+                </label>
+                <label id="customTargetWrap" class="hidden">
+                  自定义目标目录
+                  <div class="path-picker">
+                    <input id="customTarget" placeholder="选择或粘贴目标目录" />
+                    <button id="pickCustomTargetBtn">选择</button>
+                  </div>
+                </label>
+              </div>
+
+              <div class="target-preview">
+                <h3>将会复制到</h3>
+                <pre id="targetPreview"></pre>
+              </div>
+
+              <button id="openTargetBtn">打开目标目录</button>
+            </details>
+
+            <h3>提示与进度</h3>
+            <pre id="log"></pre>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <div id="settingsModal" class="modal hidden">
+      <div class="modal-card settings-card">
+        <div class="modal-head">
+          <h2>设置</h2>
+          <button id="settingsCloseBtn" class="icon-btn" aria-label="关闭">×</button>
+        </div>
+        <div class="settings-body">
+          <section class="setting-row">
+            <div>
+              <h3>面板更新</h3>
+              <p>先检查版本，再从当前网络更快的源更新管理中心。</p>
+            </div>
+            <div class="setting-actions">
+              <button id="checkPanelUpdateBtn">检查更新</button>
+              <button id="updatePanelBtn" class="primary" disabled>立即更新</button>
+            </div>
+          </section>
+          <section class="setting-row">
+            <div>
+              <h3>自动更新源</h3>
+              <p id="panelVersion">当前版本：检测中</p>
+            </div>
+            <span class="auto-source">Gitee → GitHub</span>
+          </section>
+          <section class="setting-progress" id="panelUpdateProgressWrap">
+            <div class="progress-head">
+              <span id="panelUpdateStatus">等待操作</span>
+              <span id="panelUpdatePercent">0%</span>
+            </div>
+            <div class="progress-track">
+              <div id="panelUpdateProgressBar" class="progress-bar"></div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <div id="confirmModal" class="modal hidden">
+      <div class="modal-card">
+        <div class="modal-head">
+          <h2 id="confirmTitle">确认操作</h2>
+          <button id="confirmCloseBtn" class="icon-btn" aria-label="关闭">×</button>
+        </div>
+        <p id="confirmMessage"></p>
+        <div class="modal-actions">
+          <button id="confirmCancelBtn">取消</button>
+          <button id="confirmOkBtn" class="danger">确认卸载</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/CSInterface.js"></script>
+    <script src="./js/panel.js"></script>
+  </body>
+</html>
